@@ -104,6 +104,9 @@ func (g Generator) Generate() error {
 	if err = setupFont(*siteDir, g.fontName); err != nil {
 		return err
 	}
+	if err = setupCSS(*siteDir); err != nil {
+		return err
+	}
 	if err = WriteCustomShortCodes(*siteDir); err != nil {
 		return err
 	}
